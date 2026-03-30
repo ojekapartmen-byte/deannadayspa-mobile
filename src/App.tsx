@@ -13,6 +13,7 @@ import AdminServices from "./pages/admin/AdminServices.tsx";
 import AdminBookings from "./pages/admin/AdminBookings.tsx";
 import AdminContent from "./pages/admin/AdminContent.tsx";
 import AdminPremium from "./pages/admin/AdminPremium.tsx";
+import AdminHero from "./pages/admin/AdminHero.tsx";
 
 const queryClient = new QueryClient();
 
