@@ -19,7 +19,7 @@ const Index = () => {
       <CategoryScroll />
 
       <div id="services">
-        <ServiceSection title="Pamper" highlight="Package" services={pamperServices} isLoading={pamperLoading} waNumber={waNumber} />
+        <ServiceSection title="Premium" highlight=" & Beauty Rejuvenation" services={pamperServices} isLoading={pamperLoading} waNumber={waNumber} />
       </div>
 
       <div id="premium">
