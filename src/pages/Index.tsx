@@ -15,26 +15,54 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background max-w-lg mx-auto relative">
+      {/* 1. Hero Section */}
       <HeroSection />
+      
+      {/* 2. Kategori Ikon */}
       <CategoryScroll />
 
+      {/* 3. Section Premium & Beauty Rejuvenation (Sesuai Permintaan) */}
       <div id="services">
-        <ServiceSection title="Premium" highlight=" & Beauty Rejuvenation" services={pamperServices} isLoading={pamperLoading} waNumber={waNumber} />
+        <ServiceSection 
+          title="Premium" 
+          highlight="Beauty & Rejuvenation" 
+          services={pamperServices} 
+          isLoading={pamperLoading} 
+          waNumber={waNumber} 
+        />
       </div>
 
+      {/* 4. Section Premium Cards */}
       <div id="premium">
         <PremiumCards />
       </div>
 
-      <ServiceSection title="Massage" highlight="Treatments" services={massageServices} isLoading={massageLoading} waNumber={waNumber} />
-      <ServiceSection title="Nails" highlight="& Beauty" services={nailServices} isLoading={nailsLoading} waNumber={waNumber} />
+      {/* 5. Section Massage */}
+      <ServiceSection 
+        title="Massage" 
+        highlight="Treatments" 
+        services={massageServices} 
+        isLoading={massageLoading} 
+        waNumber={waNumber} 
+      />
+      
+      {/* 6. Section Nails */}
+      <ServiceSection 
+        title="Nails" 
+        highlight="& Beauty" 
+        services={nailServices} 
+        isLoading={nailsLoading} 
+        waNumber={waNumber} 
+      />
 
+      {/* 7. Bagian Kontak */}
       <ContactSection />
 
+      {/* Spacing & Navigasi */}
       <div className="h-16" />
       <BottomNav />
     </div>
   );
-};
+}; // <-- Kurung penutup ini yang sebelumnya hilang
 
-export default Index;
+export default Index; // <-- Baris ini juga harus ada di paling bawah
