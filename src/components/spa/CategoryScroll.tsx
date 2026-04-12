@@ -37,12 +37,6 @@ const CategoryScroll = () => {
         ))}
       </div>
 
-      {/* CSS internal untuk menyembunyikan scrollbar di Chrome/Safari */}
-      <style jsx>{`
-        div::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </section>
   );
 };
