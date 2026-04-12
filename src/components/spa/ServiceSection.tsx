@@ -36,7 +36,7 @@ const ServiceSection = ({ title, highlight, services, isLoading, waNumber = "628
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.08 }}
-            className="rounded-xl overflow-hidden shadow-card bg-card"
+            className="rounded-2xl overflow-hidden shadow-elevated"
           >
             {/* Image section with gradient */}
             <div className="relative h-48 sm:h-52">
