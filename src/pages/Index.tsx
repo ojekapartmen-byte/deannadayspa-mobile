@@ -36,16 +36,7 @@ const Index = () => {
         waNumber={waNumber} 
       />
 
-      {/* 5. Section Premium & Beauty Rejuvenation */}
-      <div id="services">
-        <ServiceSection 
-          title="Premium" 
-          highlight="Beauty & Rejuvenation" 
-          services={pamperServices} 
-          isLoading={pamperLoading} 
-          waNumber={waNumber} 
-        />
-      </div>
+
 
       {/* 5. Section Massage */}
       <ServiceSection 
