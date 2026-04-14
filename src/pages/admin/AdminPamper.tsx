@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { getBookingUrl } from "@/hooks/useSpaData";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
-import { Plus, Pencil, Trash2, Loader2 } from "lucide-react";
+import { Plus, Pencil, Trash2, Loader2, ExternalLink } from "lucide-react";
 import type { Tables, TablesInsert } from "@/integrations/supabase/types";
 import ImageUpload from "@/components/admin/ImageUpload";
 
@@ -215,9 +216,16 @@ const AdminPamper = () => {
                   <p className="text-sm font-medium">{opt.name}</p>
                   <p className="text-xs text-muted-foreground">{opt.price}</p>
                 </div>
-                <Button variant="ghost" size="icon" onClick={() => deleteOptionMutation.mutate(opt.id)}>
-                  <Trash2 className="w-4 h-4 text-destructive" />
-                </Button>
+                <div className="flex gap-1">
+                  <a href={getBookingUrl(opt.booking_text)} target="_blank" rel="noopener noreferrer">
+                    <Button variant="ghost" size="icon" title="Buka link booking">
+                      <ExternalLink className="w-4 h-4 text-primary" />
+                    </Button>
+                  </a>
+                  <Button variant="ghost" size="icon" onClick={() => deleteOptionMutation.mutate(opt.id)}>
+                    <Trash2 className="w-4 h-4 text-destructive" />
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
