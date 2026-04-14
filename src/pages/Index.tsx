@@ -2,6 +2,7 @@ import HeroSection from "@/components/spa/HeroSection";
 import CategoryScroll from "@/components/spa/CategoryScroll";
 import PremiumCards from "@/components/spa/PremiumCards";
 import ServiceSection from "@/components/spa/ServiceSection";
+import ServiceScrollSection from "@/components/spa/ServiceScrollSection";
 import ContactSection from "@/components/spa/ContactSection";
 import BottomNav from "@/components/spa/BottomNav";
 import { useServices, useSiteContent } from "@/hooks/useSpaData";
@@ -26,7 +27,16 @@ const Index = () => {
         <PremiumCards />
       </div>
 
-      {/* 4. Section Premium & Beauty Rejuvenation */}
+      {/* 4. Section Pamper Package (horizontal scroll) */}
+      <ServiceScrollSection 
+        title="Pamper" 
+        highlight="Package" 
+        services={pamperServices} 
+        isLoading={pamperLoading} 
+        waNumber={waNumber} 
+      />
+
+      {/* 5. Section Premium & Beauty Rejuvenation */}
       <div id="services">
         <ServiceSection 
           title="Premium" 
