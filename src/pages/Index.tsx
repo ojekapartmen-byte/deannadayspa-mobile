@@ -4,7 +4,6 @@ import PremiumCards from "@/components/spa/PremiumCards";
 import ServiceSection from "@/components/spa/ServiceSection";
 import ServiceScrollSection from "@/components/spa/ServiceScrollSection";
 import ContactSection from "@/components/spa/ContactSection";
-import BottomNav from "@/components/spa/BottomNav";
 import { useServices, useSiteContent } from "@/hooks/useSpaData";
 
 const Index = () => {
@@ -59,10 +58,7 @@ const Index = () => {
       {/* 7. Bagian Kontak */}
       <ContactSection />
 
-      {/* Spacing & Navigasi */}
-      <div className="h-16" />
-      <BottomNav />
-    </div>
+  
   );
 }; // <-- Kurung penutup ini yang sebelumnya hilang
 
